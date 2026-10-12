@@ -1,0 +1,476 @@
+
+
+Index · HTML
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandi Prastowo / Sanpras - Stand-up Comedian Yogyakarta</title>
+<meta name="description" content="Portofolio Sandi Prastowo (Sanpras), stand-up comedian di Yogyakarta. Pengalaman tampil, rate card, dan technical rider untuk sekolah, kampus, seminar, gathering, dan acara korporat.">
+<meta name="theme-color" content="#1a1ab8">
+<meta property="og:title" content="Sandi Prastowo / Sanpras - Stand-up Comedian Yogyakarta">
+<meta property="og:description" content="Pengalaman tampil, rate card, dan technical rider.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A4%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdfcf7;--ink:#1d1d2b;--muted:#55556b;--blue:#1a1ab8;--tint:#ececfb;--line:#d6d6ee;--sun:#ffd23f;--disp:'Bricolage Grotesque','DM Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:17px/1.65 'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-text-size-adjust:100%;overflow-x:hidden}
+h1,h2,h3{font-family:var(--disp);color:var(--blue);line-height:1.05;letter-spacing:-.02em}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+h2{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:36px}
+h3{font-size:1.35rem;font-weight:700;margin-bottom:10px}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font:700 1rem 'DM Sans',sans-serif;text-decoration:none;border:2px solid var(--blue);background:var(--blue);color:var(--bg);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--blue)}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.btn.ghost{background:transparent;border-color:var(--bg);color:var(--bg)}
+ 
+/* Nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(253,252,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font:800 1.4rem var(--disp);color:var(--blue);text-decoration:none;letter-spacing:-.02em}
+nav ul{display:flex;align-items:center;gap:26px;list-style:none}
+nav ul a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+nav ul a:hover{color:var(--blue)}
+nav .btn{padding:8px 18px;font-size:.92rem}
+ 
+/* Hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding:64px 24px 80px}
+h1{font-size:clamp(3rem,9vw,6.2rem);font-weight:800;line-height:.95}
+h1 span{display:block}
+.role{font:700 1.3rem var(--disp);margin-top:22px}
+.lead{color:var(--muted);margin-top:12px;max-width:32em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.gallery{max-width:420px;width:100%;margin-left:auto}
+.frame{position:relative}
+.frame::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);background:var(--blue);border-radius:50% 50% 24px 24px / 40% 40% 24px 24px}
+.arch{position:relative;z-index:1;aspect-ratio:4/5;overflow:hidden;background:var(--tint);border-radius:50% 50% 24px 24px / 40% 40% 24px 24px;touch-action:pan-y;animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}
+.sticker{position:absolute;z-index:2;left:-26px;bottom:70px;width:118px;height:118px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;text-align:center;font:800 .95rem/1.15 var(--disp);transform:rotate(-10deg);padding:14px;box-shadow:0 6px 0 rgba(26,26,184,.25)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1)}
+.slide.missing img{display:none}
+.slide.missing::after{content:"Taruh foto di\A " attr(data-path);white-space:pre;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--blue);font-weight:500}
+.cap{min-height:3.4em;margin-top:32px;text-align:center;color:var(--muted);font-size:.98rem}
+.ctrl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:6px}
+.ctrl button{cursor:pointer;font:inherit}
+.arrow{width:42px;height:42px;border-radius:50%;border:2px solid var(--blue);background:transparent;color:var(--blue);font-size:1.1rem;line-height:1}
+.arrow:hover{background:var(--blue);color:var(--bg)}
+.dots{display:flex;gap:8px}
+.dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--blue);background:transparent;padding:0}
+.dot[aria-current="true"]{background:var(--blue)}
+ 
+/* Marquee */
+.marq{background:var(--blue);color:var(--bg);overflow:hidden;padding:18px 0}
+.track{display:flex;width:max-content;animation:scroll 45s linear infinite}
+.track span{display:flex;align-items:center;gap:40px;padding-right:40px;white-space:nowrap;font:700 1.25rem var(--disp)}
+.track span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--sun)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+ 
+/* Sorotan */
+.hl{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.card{background:var(--tint);border-radius:28px;padding:30px}
+.card .yr{font:800 clamp(2.6rem,6vw,4rem)/1 var(--disp);color:var(--blue);letter-spacing:-.03em;margin-bottom:12px}
+.card p{color:var(--muted)}
+.card.big{grid-row:span 2;background:var(--blue);color:var(--bg);display:flex;flex-direction:column;justify-content:flex-end;min-height:360px}
+.card.big .yr{color:var(--sun)}
+.card.big h3{color:var(--bg);font-size:clamp(1.8rem,4vw,2.6rem)}
+.card.big p{color:#dcdcff}
+ 
+/* Info */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;padding-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{background:var(--tint);color:var(--blue);padding:6px 16px;border-radius:999px;font-weight:500;font-size:.95rem}
+ 
+/* Timeline */
+.yrow{display:grid;grid-template-columns:150px 1fr;gap:32px;padding:28px 0;border-top:2px solid var(--blue)}
+.yrow>h3{position:sticky;top:90px;align-self:start;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:800;margin:0}
+.yrow ul{list-style:none}
+.yrow li{padding:9px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.yrow li:last-child{border-bottom:0}
+.yrow li strong{color:var(--blue)}
+ 
+/* Rate */
+.rates{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.rate{background:var(--tint);border-radius:28px;padding:32px}
+.rate.dark{background:var(--blue);color:var(--bg)}
+.rate.dark h3{color:var(--bg)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.dark .row{border-color:rgba(255,255,255,.28)}
+.row:first-of-type{border-top:0}
+.price{font:800 1.85rem var(--disp);color:var(--blue);letter-spacing:-.02em}
+.dark .price{color:var(--sun)}
+.notes{margin-top:24px;color:var(--muted);font-size:.95rem;list-style:none}
+.notes li{padding:3px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;margin-top:56px;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding-top:16px;border-top:4px solid var(--sun)}
+.steps li::before{content:counter(s);display:block;font:800 2rem var(--disp);color:var(--blue)}
+.steps b{display:block;margin:2px 0 4px}
+.steps span{color:var(--muted);font-size:.96rem}
+ 
+/* Rider */
+.rider{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.rider>div{border-top:4px solid var(--blue);padding-top:18px}
+.rider h4{font-size:1rem;font-style:italic;margin-top:14px}
+.rider p{color:var(--muted);font-size:.98rem}
+ 
+/* Video */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:44px}
+.links{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.links a{display:inline-block;padding:10px 20px;border-radius:999px;background:var(--blue);color:var(--bg);font-weight:700;text-decoration:none;font-size:.95rem}
+.links a:hover{background:var(--ink)}
+ 
+/* Kontak */
+.contact{background:var(--blue);color:var(--bg);text-align:center;padding:96px 0}
+.contact h2{color:var(--bg);font-size:clamp(2.4rem,7vw,4.6rem);margin-bottom:16px}
+.contact p{max-width:30em;margin:0 auto;color:#dcdcff}
+.contact .cta{justify-content:center}
+.soc{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;list-style:none;margin-top:40px}
+.soc a{color:var(--bg);font-weight:500}
+footer{padding:24px 0;text-align:center;color:var(--muted);font-size:.9rem}
+ 
+@media (max-width:820px){
+  nav ul li:not(:last-child){display:none}
+  .hero{grid-template-columns:1fr;gap:56px;padding-top:40px}
+  .gallery{margin:0 auto;padding-right:16px}
+  .sticker{left:-10px}
+  .hl{grid-template-columns:1fr}.card.big{grid-row:auto;min-height:280px}
+  .yrow{grid-template-columns:1fr;gap:8px}.yrow>h3{position:static}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){.arch{animation:none}.track{animation:none}.btn{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+ 
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Sanpras</a>
+    <ul>
+      <li><a href="#sorotan">Sorotan</a></li>
+      <li><a href="#pengalaman">Pengalaman</a></li>
+      <li><a href="#rate">Rate</a></li>
+      <li><a href="#rider">Rider</a></li>
+      <li><a class="btn" href="#kontak">Booking</a></li>
+    </ul>
+  </div>
+</nav>
+ 
+<header class="wrap hero" id="top">
+  <div>
+    <h1><span>Sandi Prastowo</span><span>/ Sanpras</span></h1>
+    <p class="role">Stand-up comedian based in Yogyakarta</p>
+    <p class="lead">Clean comedy untuk sekolah, kampus, seminar, gathering, acara korporat, dan panggung stand-up. Materi bisa disesuaikan dengan tema acara.</p>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/628996204235" target="_blank" rel="noopener">Hubungi lewat WhatsApp</a>
+      <a class="btn alt" href="#rate">Lihat rate</a>
+    </div>
+  </div>
+ 
+  <!-- ============================================================
+       SLIDESHOW FOTO: foto dan caption diatur di script bawah
+       (cari tulisan: GANTI FOTO DAN CAPTION DI SINI)
+       ============================================================ -->
+  <div class="gallery" role="region" aria-roledescription="carousel" aria-label="Foto penampilan">
+    <div class="frame">
+      <div class="arch" id="stage"></div>
+      <div class="sticker">Golden Ticket SUCI 12</div>
+    </div>
+    <p class="cap" id="cap"></p>
+    <div class="ctrl">
+      <button class="arrow" id="prev" aria-label="Foto sebelumnya">&#8592;</button>
+      <div class="dots" id="dots"></div>
+      <button class="arrow" id="next" aria-label="Foto berikutnya">&#8594;</button>
+    </div>
+  </div>
+</header>
+ 
+<div class="marq" aria-label="Pernah tampil di berbagai acara dan kanal">
+  <div class="track" id="track">
+    <span>Standupfest Standupindo</span><span>Badan Otorita Borobudur</span><span>Deddy Corbuzier</span><span>Tempo x Kemkominfo</span><span>Universitas Gadjah Mada</span><span>Anime Festival Asia Indonesia</span><span>Kompas TV</span><span>Kumparan</span><span>SKK Migas</span><span>Greenfields</span>
+  </div>
+</div>
+ 
+<main>
+<section id="sorotan">
+  <div class="wrap">
+    <h2>Sorotan</h2>
+    <div class="hl">
+      <div class="card big">
+        <div class="yr">2026</div>
+        <h3>Peraih Golden Ticket SUCI 12</h3>
+        <p>Meraih Golden Ticket di ajang Stand-up Comedy Indonesia (SUCI) musim 12 di Kompas TV.</p>
+      </div>
+      <div class="card">
+        <div class="yr">2024</div>
+        <h3>Juara Somasi Community</h3>
+        <p>Di YouTube channel Deddy Corbuzier.</p>
+      </div>
+      <div class="card">
+        <div class="yr">2023</div>
+        <h3>Spesial 1 jam: "Lorem Ipsum"</h3>
+        <p>Membuat pertunjukan stand-up comedy spesial berdurasi satu jam.</p>
+      </div>
+      <div class="card">
+        <div class="yr">2023</div>
+        <h3>Headliner Freedom Of Nggambleh</h3>
+        <p>Stand-up comedy show akhir tahun oleh Standupindo Jogja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<section id="info" style="padding-top:0">
+  <div class="wrap info">
+    <div><h3>Penonton yang bisa dihibur</h3><p>17 tahun ke atas</p></div>
+    <div><h3>Materi yang bisa dibawakan</h3><p>Clean comedy, dan bisa membawakan materi sesuai tema acara.</p></div>
+    <div>
+      <h3>Bisa tampil di acara</h3>
+      <ul class="chips"><li>Pentas seni</li><li>Seminar</li><li>Gathering</li><li>Acara korporat</li><li>Stand-up show</li></ul>
+    </div>
+  </div>
+</section>
+ 
+<section id="pengalaman" style="padding-top:24px">
+  <div class="wrap">
+    <h2>Pengalaman stand-up terbaik</h2>
+    <div class="yrow">
+      <h3>2026</h3>
+      <ul>
+        <li>Penampil di Gathering Manufacturing Team Greenfields - Yogyakarta</li>
+        <li><strong>Peraih Golden Ticket SUCI 12 Kompas TV</strong></li>
+        <li>Opener show "Aman Ya" by Gianluigich - Semarang</li>
+        <li>Opener show "Sudah KuGilang" by Gilang Kecu - Magelang</li>
+      </ul>
+    </div>
+    <div class="yrow">
+      <h3>2025</h3>
+      <ul>
+        <li>Penampil di Vegetalk "Happy Tummy Happy Life" by Vegeta Herbal x Kumparan - Yogyakarta &amp; Jakarta</li>
+        <li>Penampil di MENTARI Goes to Campus - Universitas Gadjah Mada</li>
+        <li>Penampil di Akiba Stage - Anime Festival Asia Indonesia</li>
+        <li>Penampil di Politics Reborn: "Udah Milih, Masa Nggak ikut Ngatur?" - Yogyakarta</li>
+        <li>Penampil di Stand-up Nite Yogyakarta 2025</li>
+        <li>Penampil di Diskusi Publik "Masa Depan Politik dan Tantangan Politisi Muda" - Jakarta</li>
+        <li>Penampil di Rapat Koordinasi sekuriti dan pengelolaan handak SKK MIGAS bag. Sumbagsel - Yogyakarta</li>
+        <li>Penampil di "Festival Of Nggambleh" oleh Standupindo Jogja</li>
+      </ul>
+    </div>
+    <div class="yrow">
+      <h3>2024</h3>
+      <ul>
+        <li><strong>Juara Somasi Community</strong> di YouTube Channel Deddy Corbuzier</li>
+        <li>Penampil di Land of Leisures 2024 "Shout it Out" by Ambarrukmo - Yogyakarta</li>
+        <li>Penampil di Jambore Standupindo 2024 - Yogyakarta</li>
+        <li>Penampil di Youth Economic Summit 2024 @Graha Bakti Budaya, TIM - Jakarta</li>
+        <li>Penampil di diskusi publik penguatan perlindungan HAM dalam revisi UU ITE oleh Tempo &amp; Kemkominfo</li>
+        <li>Opener di "Ge On All Tempo" Tour by Ge Pamungkas - Yogyakarta</li>
+        <li>Penampil di "Freedom Of Nggambleh Akhir Tahun", stand-up comedy show oleh Standupindo Jogja</li>
+      </ul>
+    </div>
+    <div class="yrow">
+      <h3>2023</h3>
+      <ul>
+        <li>Penampil di Standupfest Standupindo 2023 - Jakarta</li>
+        <li>Membuat pertunjukan stand-up comedy spesial berdurasi 1 jam berjudul "Lorem Ipsum"</li>
+        <li>Penampil di "BoB Stand-up Camp", stand-up comedy show oleh Badan Otorita Borobudur</li>
+        <li>Opener di "Podcast Seminggu Goes To Jogja"</li>
+        <li>Headliner di "Freedom Of Nggambleh Akhir Tahun", stand-up comedy show oleh Standupindo Jogja</li>
+      </ul>
+    </div>
+  </div>
+</section>
+ 
+<section id="rate" style="background:var(--tint)">
+  <div class="wrap">
+    <h2>Rate</h2>
+    <div class="rates">
+      <div class="rate" style="background:var(--bg)">
+        <h3>Sekolah, kampus, seminar</h3>
+        <div class="row"><span>Durasi 7-10 menit</span><span class="price">Rp2.250.000</span></div>
+        <div class="row"><span>Durasi 15 menit</span><span class="price">Rp2.750.000</span></div>
+      </div>
+      <div class="rate dark">
+        <h3>EO, pemerintah, korporat</h3>
+        <div class="row"><span>Durasi 7-10 menit</span><span class="price">Rp3.750.000</span></div>
+        <div class="row"><span>Durasi 15 menit</span><span class="price">Rp4.500.000</span></div>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>Tambah Rp1.000.000 jika penampilan akan diunggah ke platform sosial media.</li>
+      <li>Belum termasuk rider dan akomodasi jika tampil di luar kota Yogyakarta.</li>
+    </ul>
+    <ol class="steps">
+      <li><b>Kirim detail acara</b><span>Lewat WhatsApp: tanggal, kota, jenis acara, durasi, dan tema.</span></li>
+      <li><b>Sepakati rate dan rider</b><span>Rate mengikuti jenis acara, rider mengikuti lokasi.</span></li>
+      <li><b>Konfirmasi tiket dan akomodasi</b><span>Untuk acara di luar Yogyakarta, tiket dikonfirmasi paling lambat 2 hari sebelum berangkat.</span></li>
+    </ol>
+  </div>
+</section>
+ 
+<section id="rider">
+  <div class="wrap">
+    <h2>Technical rider</h2>
+    <div class="rider">
+      <div>
+        <h3>Transportasi</h3>
+        <h4>Dalam wilayah Daerah Istimewa Yogyakarta</h4>
+        <p>Cukup mengganti biaya bensin transportasi sebesar Rp150.000.</p>
+        <h4>Di luar wilayah Daerah Istimewa Yogyakarta</h4>
+        <p>Menanggung biaya transportasi untuk 1 orang (Sanpras), rute Yogyakarta - kota pertunjukan - Yogyakarta, dengan pilihan kereta kelas eksekutif atau pesawat udara. Tanggal, jam, dan seat harus sudah dikonfirmasi paling lambat 2 hari sebelum keberangkatan.</p>
+      </div>
+      <div>
+        <h3>Hotel</h3>
+        <h4>Dalam wilayah Daerah Istimewa Yogyakarta</h4>
+        <p>Tidak perlu menyediakan penginapan.</p>
+        <h4>Di luar wilayah Daerah Istimewa Yogyakarta</h4>
+        <p>Menyediakan penginapan untuk 1 orang (Sanpras): kamar standar twin bed yang nyaman untuk istirahat, dengan jumlah hari sesuai ketentuan panitia.</p>
+      </div>
+      <div>
+        <h3>Konsumsi</h3>
+        <h4>Dalam dan di luar wilayah Daerah Istimewa Yogyakarta</h4>
+        <p>Makan berat untuk 2 orang, air mineral secukupnya, Tolak Angin, serta es americano atau es latte tanpa gula untuk 2 orang.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<section id="video" style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h3>Video penampilan stand-up</h3>
+      <!-- GANTI href="#" DENGAN LINK VIDEO KAMU (YouTube, Instagram, dll.) -->
+      <ul class="links">
+        <li><a href="#" target="_blank" rel="noopener">Video 1</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Video 2</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Video 3</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Video 4</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Turut tampil juga di</h3>
+      <!-- GANTI href="#" DENGAN LINK EPISODE / TAYANGAN MASING-MASING -->
+      <ul class="links">
+        <li><a href="#" target="_blank" rel="noopener">Podcast Raditya Dika</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Talkshow Jiroluger</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Podcast TVRI Jogja</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+ 
+<section class="contact" id="kontak">
+  <div class="wrap">
+    <h2>Mau mengundang Sanpras?</h2>
+    <p>Kirim tanggal, kota, dan jenis acaranya lewat WhatsApp atau email.</p>
+    <div class="cta">
+      <a class="btn sun" href="https://wa.me/628996204235" target="_blank" rel="noopener">WhatsApp 0899-6204-235</a>
+      <a class="btn ghost" href="mailto:sandiprastowo@gmail.com">Kirim email</a>
+      <button class="btn ghost" id="copy" type="button">Salin email</button>
+    </div>
+    <ul class="soc">
+      <li><a href="https://www.instagram.com/sanpras_" target="_blank" rel="noopener">Instagram @sanpras_</a></li>
+      <li><a href="https://x.com/sanpras_" target="_blank" rel="noopener">X @sanpras_</a></li>
+      <li><a href="https://www.tiktok.com/@sanpras_" target="_blank" rel="noopener">TikTok @sanpras_</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+ 
+<footer>Sandi Prastowo / Sanpras, Yogyakarta</footer>
+ 
+<script>
+/* ============================================================
+   GANTI FOTO DAN CAPTION DI SINI
+   - Buat folder "images" di sebelah index.html
+   - Simpan foto dengan nama yang sama seperti "src" di bawah
+   - Ukuran ideal: portrait 4:5, misalnya 1200 x 1500 px (JPG, di bawah 400 KB)
+   - "caption" = teks di bawah foto: tulis acara, kota, dan tahun
+   - Mau tambah foto? Salin satu baris { ... }, lalu ubah isinya
+   ============================================================ */
+const SLIDES = [
+  { src: "images/foto-1.jpg", caption: "GANTI CAPTION - contoh: Standupfest Standupindo 2023, Jakarta" },
+  { src: "images/foto-2.jpg", caption: "GANTI CAPTION - contoh: Land of Leisures 2024, Yogyakarta" },
+  { src: "images/foto-3.jpg", caption: "GANTI CAPTION - contoh: MENTARI Goes to Campus, UGM 2025" },
+  { src: "images/foto-4.jpg", caption: "GANTI CAPTION - contoh: Festival Of Nggambleh 2025" },
+  { src: "images/foto-5.jpg", caption: "GANTI CAPTION - contoh: Gathering Manufacturing Team Greenfields 2026" }
+];
+ 
+(function () {
+  var stage = document.getElementById('stage'), cap = document.getElementById('cap'),
+      dotsBox = document.getElementById('dots'), slides = [], dots = [], cur = 0, timer = null,
+      reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+  SLIDES.forEach(function (s, i) {
+    var f = document.createElement('div');
+    f.className = 'slide'; f.dataset.path = s.src;
+    var img = new Image();
+    img.src = s.src; img.alt = s.alt || s.caption; img.loading = i ? 'lazy' : 'eager';
+    img.onerror = function () { f.classList.add('missing'); };
+    f.appendChild(img); stage.appendChild(f); slides.push(f);
+    var d = document.createElement('button');
+    d.className = 'dot'; d.setAttribute('aria-label', 'Foto ' + (i + 1));
+    d.onclick = function () { show(i); restart(); };
+    dotsBox.appendChild(d); dots.push(d);
+  });
+ 
+  function show(i) {
+    cur = (i + SLIDES.length) % SLIDES.length;
+    slides.forEach(function (s, k) { s.classList.toggle('on', k === cur); });
+    dots.forEach(function (d, k) { d.setAttribute('aria-current', k === cur ? 'true' : 'false'); });
+    cap.textContent = SLIDES[cur].caption;
+  }
+  function start() { if (!reduce && SLIDES.length > 1) timer = setInterval(function () { show(cur + 1); }, 6000); }
+  function stop() { clearInterval(timer); }
+  function restart() { stop(); start(); }
+ 
+  document.getElementById('prev').onclick = function () { show(cur - 1); restart(); };
+  document.getElementById('next').onclick = function () { show(cur + 1); restart(); };
+ 
+  var box = document.querySelector('.gallery'), x0 = null;
+  ['pointerenter', 'focusin'].forEach(function (e) { box.addEventListener(e, stop); });
+  ['pointerleave', 'focusout'].forEach(function (e) { box.addEventListener(e, start); });
+  box.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  });
+  stage.addEventListener('pointerdown', function (e) { x0 = e.clientX; });
+  stage.addEventListener('pointerup', function (e) {
+    if (x0 === null) return;
+    var dx = e.clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) { show(cur + (dx < 0 ? 1 : -1)); restart(); }
+  });
+  show(0); start();
+ 
+  /* Marquee: gandakan isi supaya berputar tanpa putus */
+  var tr = document.getElementById('track');
+  tr.innerHTML += tr.innerHTML.replace(/<span>/g, '<span aria-hidden="true">');
+ 
+  /* Tombol salin email */
+  var cp = document.getElementById('copy');
+  cp.onclick = function () {
+    var done = function () { cp.textContent = 'Email tersalin'; setTimeout(function () { cp.textContent = 'Salin email'; }, 1800); };
+    if (navigator.clipboard) navigator.clipboard.writeText('sandiprastowo@gmail.com').then(done);
+  };
+ 
+  /* Link yang masih "#" tidak melompat ke atas halaman */
+  document.querySelectorAll('a[href="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); });
+  });
+})();
+</script>
+</body>
+</html>
+ 
+
+Claude finished the response
